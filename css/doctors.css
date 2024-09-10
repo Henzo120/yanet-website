@@ -1,0 +1,99 @@
+.doctors {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 50px auto;
+    margin-bottom: 180px;
+}
+
+.doctor1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.51s ease-in-out;
+    /* Removed background color */
+}
+
+.doctor1:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px gray;
+}
+
+
+.doctor1 img {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Cover the container while preserving aspect ratio */
+    object-position: center top; /* Focus on the center and top of the image */
+    border-radius: 10px; /* Adjusts the border radius to make it rectangular */
+    border: 2px solid #ddd; /* Optional: Add a border if desired */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow effect if desired */
+}
+
+
+.title {
+    text-align: center;
+}
+
+.title p {
+    color: gray;
+}
+
+.head-discription {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.head-discription h2 {
+    padding: 60px 0px 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    background: linear-gradient(to right, blue, red); /* Define gradient colors */
+    -webkit-background-clip: text; /* For Chrome and Safari */
+    background-clip: text; /* Standard syntax */
+    color: transparent;
+}
+
+.head-discription p {
+    font-size: 17px;
+    color: #777;
+}
+
+@media(max-width: 900px) {
+    .head-discription {
+        width: 80%;
+    }
+}
+
+@media(max-width: 620px) {
+    .head-discription h2 {
+        font-size: 30px;
+    }
+    
+    .head-discription p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .doctors {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 800px) {
+    .doctors {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width: 400px) {
+    .doctors-head h3 {
+        font-size: 27px;
+    }
+}

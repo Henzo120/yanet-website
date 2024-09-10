@@ -1,0 +1,336 @@
+.sister-companies{
+    max-width: 70%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+    margin-bottom: 180px;
+}
+.social-reponsibilities{
+    margin: 40px auto;
+    max-width: 70vw;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.social-responsibilities p {
+    margin-bottom: 20px;
+    font-size: 1.7em;
+    text-align: center;
+}
+.responsibilities {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.responsibility-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.responsibility-item img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust as needed for equal sizing */
+    max-height: 600px; /* Adjust as needed for equal sizing */
+    object-fit: cover; /* Ensure images fit within the specified dimensions */
+    border-radius: 10px;
+}
+.responsibility-item figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333; /* Adjust color as needed */
+}
+
+.companies div a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;}
+.companies img {
+        width: 100%;
+        height: 300px; /* Adjust the height to your preference */
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+        border-radius: 20px;
+    }
+    
+
+.subsidiaries-header {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.subsidiaries-header h2 {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(240, 12, 12), blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subsidiary-details {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.subsidiary-info {
+   
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+
+.subsidiary-info img {
+    width: 110%;
+    border-radius: 10px;
+}
+
+.subsidiary-info span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.subsidiary-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.services-title {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.services-list {
+    list-style-type: disc;
+    margin-left: 10%;
+    font-size: 16px;
+    color: #000000;
+    padding-left: 20px;
+
+}
+
+.services-list li {
+    margin-bottom: 20px;
+}
+#business-units {
+    max-width: 80%; /* Adjust to fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing issues */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    border-radius: 10px; /* Optional: Round the corners of the image */
+}
+.title {
+    text-align: center;
+   
+}
+
+.title img#business-units {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.title span {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 15px;
+    background: linear-gradient(to right, rgb(240, 12, 12), blue); /* Define the gradient */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard syntax */
+    color: transparent; /* Ensure text color is transparent to show gradient */
+}
+
+
+.title p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: center; /* Center-align the text */
+    color: black; /* Set the text color to dark black */
+}
+
+@media(max-width: 1100px){
+    .sister-companies{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .companies div a{
+        font-size: 14px;
+    }
+}
+@media(max-width: 800px){
+    .sister-companies{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .companies div a{
+        font-size: 14px;
+    }
+    .social-reponsibilities{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #business-units {
+        max-width: 75%; /* Adjust to fit the container on smaller screens */
+    }
+}
+
+@media(max-width: 400px){
+    .companies img{
+        width: 150%;
+        border-radius: 20px;
+        margin-left: -40px;
+    }
+}
+@media(max-width: 350px){
+    .companies div a{
+        font-size: 12px;
+    }
+    #business-units {
+        max-width: 75%; /* Adjust to fit the container on smaller screens */
+    }
+}
+.sustainability-section {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent; /* Removed background color */
+}
+
+.sustainability-section h2 {
+    font-size: 3.5em;
+    background: linear-gradient(to right, blue, red); /* Gradient background */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.sustainability-section .intro-text,p {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    text-align: justify;
+    padding-left: 2%;
+}
+
+
+.sustainability-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 15px;
+    list-style-type: none;
+    padding-left: 5%;
+}
+
+.sustainability-list li {
+    font-size: 1.3em; /* Slightly larger font size */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* Reduce the vertical margin between items */
+}
+
+.sustainability-list li i {
+    color: #2a7d2c;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+
+/* Ensure proper item distribution */
+.sustainability-list li:nth-child(6) {
+    grid-column: 2; /* Start second column from the 6th item */
+}
+
+/* Mobile Query for screens under 800px */
+@media screen and (max-width: 800px) {
+    .sustainability-section {
+        padding: 15px;
+    }
+
+    .sustainability-section h2 {
+        font-size: 2.1em; /* Reduced font size */
+    }
+
+    .sustainability-section .intro-text,
+    .sustainability-section p {
+        font-size: 0.9em; /* Reduced font size for better readability */
+        padding-left: 0; /* Remove padding for smaller screens */
+    }
+
+    .sustainability-list {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding-left: 0; /* Remove padding */
+    }
+
+    .sustainability-list li {
+        font-size: 0.9em; /* Slightly smaller font size */
+        margin-bottom: 10px; /* Add some space between items */
+    }
+
+    .sustainability-list li i {
+        font-size: 0.9em; /* Adjust icon size for mobile */
+    }
+}
+
+/* Mobile Query for screens under 800px */
+@media screen and (max-width: 800px) {
+    .social-responsibilities {
+        max-width: 90vw;
+        padding: 10px;
+    }
+
+    .social-responsibilities p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .responsibilities {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        gap: 5px; /* Reduced gap between images on smaller screens */
+    }
+
+    .responsibility-item img {
+        max-width: 100%; /* Ensure images fit within screen width */
+        max-height: 200px; /* Adjust as needed for smaller screens */
+    }
+
+    .responsibility-item figcaption {
+        font-size: 1.2em; /* Adjusted font size for smaller screens */
+    }
+}
+/* Mobile Query for screens under 800px */
+@media screen and (max-width: 800px) {
+    .head-description h2 {
+        font-size: 1.8em;
+    }
+
+    .companies {
+        max-width: 90vw;
+        padding: 10px;
+    }
+
+    .title span {
+        font-size: 1.5em;
+    }
+
+    .title p {
+        font-size: 1em;
+    }
+
+    .services-list {
+        font-size: 1em;
+    }
+}

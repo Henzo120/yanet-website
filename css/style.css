@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.email-info{
+    display: flex;
+    gap: 20px;
+}
+.top-info div p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #1626d8;
+    font-family: sans-serif;
+}
+.phone-number{
+    display: flex;
+    gap: 20px;
+}
+.top-info{
+    display: flex;
+    gap: 40px;
+    text-shadow: 0px 0px 60px black;
+}
+.top-info div img{
+width: 20px;
+
+}
+
+/* slider***** */
+.slider{
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+.content ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left:20px;      /* Remove left padding */
+    margin: 0;            /* Remove default margin */
+}
+
+.content li {
+    position: relative;
+    padding: 15px 20px; /* Increased padding for larger size */
+    margin-bottom: 6px; /* Reduced margin for closer spacing */
+    background: rgba(255, 255, 255, 0.7); /* Increased transparency for the background */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures pseudo-element doesn’t overflow */
+    max-width: 350px; /* Reduced width of each list item */
+    width: 100%; /* Allows responsiveness */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 20px; /* Increased font size */
+    line-height: 1.5; /* Increased line height for better readability */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically center */
+}
+
+.content li::before {
+    content: "\2713"; /* Unicode checkmark character */
+    font-size: 24px; /* Size of the checkmark */
+    color: green; /* Color of the checkmark */
+    margin-right: 15px; /* Space between checkmark and text */
+}
+
+.content li:hover {
+    background: rgba(255, 255, 255, 0.6); /* More transparent background on hover */
+    transform: scale(1.05); /* Slightly enlarges the list item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for more noticeable hover effect */
+}
+
+.content h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: rgb(251, 251, 251);
+    
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.slider .list .item .content h2{
+    font-size: 40px;
+    margin: 0;
+    color: rgb(250, 246, 246);
+    font-family: "Montserrat", sans-serif;
+}
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3){
+    animation-duration: 1.3s;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 1;
+    display: none;
+}
+.arrows button{
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: black;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+    display: none;
+}
+
+@media(max-width: 680px ){
+    .slider .list .item .content h2{
+        font-size: 40px;
+        margin: 0;
+    }
+    .thumbnail{
+        justify-content: start;
+    }
+    .arrows{
+        top: 50%;
+    }
+}
+@media(max-width: 520px){
+    .arrows{
+        display: none;
+    }
+}
+@media(max-width: 500px){
+    .slider .list .item .content h2{
+        font-size: 30px;
+    }
+    .slider .list .item .content p{
+        font-size: 14px;
+    }
+}
+@media(max-width: 235px){
+    .slider .list .item .content h2{
+        font-size: 10px;
+    }
+    .slider .list .item .content p{
+        font-size: 10px;
+    }
+}
+@media(max-width: 330px){
+    .slider .list .item .content h2{
+        font-size: 25px;
+    }
+    .slider .list .item .content p{
+        font-size: 15px;
+    }
+}
+.nav-bar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    backdrop-filter: blur(60px);
+    background: rgba(245, 239, 239, 0.822); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+}
+.logo-div img{
+    width: 150px;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li{
+    list-style: none;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #470ecb;
+    transition: 0.4s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(243, 243, 243, 0.738);
+}
+.nav-bar ul li a:hover{
+    color: #f70a0a;
+}
+#cover{
+    backdrop-filter: blur(60px); /* Creates the frosted glass effect */
+    background: rgba(113, 110, 110, 0.205); /* Semi-transparent white background */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional: adds a subtle border for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 0;
+    height:0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+#cover.open-it{
+    width: 50%;
+    min-height: 812px;
+    border-bottom-left-radius: 0;
+
+}
+#hamber-open{
+    display: none;
+    width: 40px;
+    cursor: pointer;
+}
+
+#cover ul{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+#cover ul li{
+    list-style: none;
+    padding-top: 100px;
+}
+#cover ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 4px;
+    border-radius: 10px;
+}
+#cover ul li a:hover{
+    color: #f70a0a;
+}
+.back-to-top{
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+}
+.back-to-top img{
+    width: 30px;
+}
+.tag{
+    color: red;
+}
+/* landing css */
+
+@media (max-width: 770px) {
+    nav ul li{
+        display: none;
+    }
+    #hamber-open{
+        display: block;
+        z-index: 100;
+    }
+    .top-info{
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+    }
+
+}
+
+@media(max-width: 550px){
+    #cover ul{
+        position: absolute;
+        top: 10%;
+        left: 13%;
+    }
+    .top-info div p{
+        font-size: 12px;
+    }
+    .top-info div img{
+        width: 15px;
+    }
+}
+
+@media(max-width: 450px){
+    .logo-div img{
+        width: 100px;
+    }
+    #hamber-open{
+        width: 40px;
+    }
+    #cover ul{
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+    .nav-bar{
+        padding-bottom:46px;
+    }
+    .top-info{
+        position: absolute;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+    .phone-number{
+        display: flex;
+        gap: 6px;
+    }
+    .email-info{
+        display: flex;
+        gap: 5px;
+    }
+}
+/* Container to hold both columns */
+.list-container {
+    display: flex;
+    justify-content: space-between; /* Create space between columns */
+    gap: 100px; /* Optional: Adjust the gap between columns */
+}
+
+/* Each column styling */
+.column {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    flex: 3; /* Make each column equal in width */
+}
+
+/* Bold styling for the specified list items */
+.column li strong {
+    font-weight: bold;
+}
+.column li {
+    white-space: nowrap; /* Prevent text from wrapping onto the next line */
+}
+
+
+/* Optional: Responsive design to stack columns vertically on smaller screens */
+@media only screen and (max-width: 780px) {
+    .list-container {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+}
+
+.side-by-side-headings {
+    display: flex;
+    flex-wrap: wrap; /* Wraps to the next line if there is not enough space */
+    gap: 20px; /* Adds spacing between each heading item */
+}
+
+.heading-item {
+    flex: 1 1 30%; /* Allows each item to take up 30% of the container width */
+    min-width: 250px; /* Ensures items don't shrink too much */
+}
+
+.heading-item h3 {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: rgb(35, 94, 221);
+    margin-bottom: 10px;
+}
+
+.heading-item h3 i {
+    margin-right: 10px; /* Adds space between the icon and text */
+}
+
+.heading-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.heading-item ul li {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .side-by-side-headings {
+        flex-direction: column; /* Stack heading items vertically on smaller screens */
+    }
+
+    .heading-item {
+        width: 100%;
+    }
+}
